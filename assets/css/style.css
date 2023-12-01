@@ -1,0 +1,107 @@
+/* ANCHOR root */
+:root {
+
+
+}
+
+/* ANCHOR resets */
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* IMG RESET */
+img {
+    width: 100%;
+    display: block;
+}
+
+/* FONT RESET */
+html {
+    font-family: sans-serif;
+}
+
+/* ANCHOR utility classes */
+
+.container {
+    padding: 0 2rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* ANCHOR mobile first */
+/* ANCHOR begin header style */
+header {
+    background-color: rgba(0, 132, 253, 1);
+}
+
+header .container {
+    padding-block: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .container .menu .fa-bars {
+    font-size: 160%;
+}
+
+header .container .menu .menu-list {
+    display: none;
+}
+
+/* ANCHOR begin main style */
+
+
+
+
+/* ANCHOR begin footer style */
+
+
+
+
+
+/* ANCHOR @media tablet 810px */
+
+
+
+
+
+
+/* ANCHOR @media desktop 1920px */
+
+@media screen and (min-width: 1920px) {
+
+    /* NOTE header */
+    .container {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    header .container .menu .fa-bars {
+        display: none;
+    }
+
+    header .container .menu .menu-list {
+        display: flex;
+        gap: 20px;
+
+        list-style-type: none;
+    }
+
+    header .container .menu .menu-list li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    header .container .menu .menu-list li:last-child a {
+        color: black;
+        background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
