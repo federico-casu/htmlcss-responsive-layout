@@ -169,6 +169,7 @@ main {
     background-color: white;
     color: black;
     align-items: center;
+    border-radius: 40px;
 }
 
 #planning .card > p {
@@ -198,22 +199,76 @@ main {
     color: white;
     background-color: rgba(151, 146, 228, 1);
     align-items: center;
+
+    border-radius: 40px;
 }
 
 #testimonials .container .card figure {
     width: 90%;
     aspect-ratio: 1;
-    background-image: url('../img/testimonial1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 100%;
 }
 
+#testimonials .container .card p::before {
+    content: ' \00275d';
+    font-size: 36px;
+}
 
+#testimonials .container .card p::after {
+    content: ' \00275e';
+    font-size: 36px;
+}
+
+#testimonials .container .card:first-of-type figure {
+    background-image: url('../img/testimonial1.jpg');
+}
+
+#testimonials .container .card:nth-of-type(2) figure {
+    background-image: url('../img/testimonial2.jpg');
+}
+
+#testimonials .container .card:last-of-type figure {
+    background-image: url('../img/testimonial3.jpg');
+}
+
+#testimonials .container .card .card-text {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
 
 /* ANCHOR begin footer style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,6 +290,17 @@ main {
 
     #demo-app .container .card:first-child {
         flex-basis: calc(((100% / 3 - (40px / 3))) * 2 + 20px);
+    }
+
+
+    /* NOTE testimonials section */
+    #testimonials .container .card {
+        flex-direction: row;
+    }
+
+    #testimonials .container .card .card-text {
+        align-items: flex-start;
+        text-align: start;
     }
 
 }
@@ -329,5 +395,11 @@ main {
     /* FIXME fix card dimension and position */
     #planning .container .card {
         flex-basis: 50%;
+    }
+
+
+    /* NOTE testimonials section */
+    #testimonials .container .card figure {
+        width: 50%;
     }
 }
