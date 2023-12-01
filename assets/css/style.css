@@ -4,7 +4,7 @@
 /* ANCHOR root */
 :root {
     --cardTitleBlue: rgba(0, 132, 253, 1);
-
+    --lightpurple: rgba(151, 146, 228, 1);
 }
 
 /* ANCHOR resets */
@@ -241,6 +241,54 @@ main {
 }
 
 
+
+/* ANCHOR features section style */
+
+#features {
+    background-color: var(--lightpurple);
+}
+
+#features .container .section-title {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+#features .container .card {
+    background-color: white;
+    align-items: flex-start;
+}
+
+#features .container .card > span, 
+#features .container .card > h3 {
+    color: var(--lightpurple);
+}
+
+#features .container .card > span {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+#features .container .card > h3 {
+    font-size: 24px;
+}
+
+#features .container .card > p {
+    color: rgba(124, 124, 124, 1);
+}
+
+#features .container .card > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background-color: var(--lightpurple);
+    padding: 0.5rem 3rem;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+
 /* ANCHOR begin footer style */
 
 
@@ -303,6 +351,24 @@ main {
         text-align: start;
     }
 
+
+    /* NOTE features section */
+
+    #features .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* border: 2px solid red; */
+    }
+
+    #features .container h2 {
+        flex-basis: 100%;
+    }
+
+    #features .container .card {
+        flex-basis: calc( (100% / 2) - 10px);
+    }
+
 }
 
 
@@ -316,6 +382,7 @@ main {
     .container {
         width: 60%;
         margin: 0 auto;
+        padding-inline: 0;
     }
 
     /* NOTE header */
@@ -381,7 +448,7 @@ main {
     #planning .container {
         flex-direction: row;
         gap: 80px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         align-items: flex-end;
         justify-content: center;
     }
@@ -401,5 +468,33 @@ main {
     /* NOTE testimonials section */
     #testimonials .container .card figure {
         width: 50%;
+    }
+
+
+    /* NOTE features section */
+
+    #features .container {
+        padding-inline: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* border: 2px solid red; */
+    }
+
+    #features .container > .section-title {
+        flex-basis: 100%;
+        font-size: 48px;
+    }
+
+    #features .container .card {
+        flex-basis: calc( (100% / 3) - (40px / 3));
+    }
+
+    #features .container .card > span {
+        font-size: 56px;
+    }
+
+    #features .container .card > h3 {
+        font-size: 30px;
     }
 }
