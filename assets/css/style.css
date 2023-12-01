@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+
 /* ANCHOR root */
 :root {
-
+    --cardTitleBlue: rgba(0, 132, 253, 1);
 
 }
 
@@ -20,30 +23,47 @@ img {
 
 /* FONT RESET */
 html {
-    font-family: sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 /* ANCHOR utility classes */
 
 .container {
-    padding: 0 2rem;
+    margin: 3rem 2rem;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px dashed red;
 }
 
 .d-flex {
     display: flex;
 }
 
+.container .card {
+    flex-direction: column;
+    gap: 2rem;
+}
+
 /* ANCHOR mobile first */
 /* ANCHOR begin header style */
 header {
     background-color: rgba(0, 132, 253, 1);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 
 header .container {
-    padding-block: 1rem;
+    height: 80px;
+    flex-direction: row;
+    padding: 1rem 2rem;
     justify-content: space-between;
     align-items: center;
     color: white;
+    margin: 0;
 }
 
 header .container .menu .fa-bars {
@@ -56,8 +76,62 @@ header .container .menu .menu-list {
 
 /* ANCHOR begin main style */
 
+main {
+    padding-top: 80px;
+}
 
+/* ANCHOR begin demo app section style */
 
+#demo-app .container .card {
+    align-items: center;
+    text-align: center;
+    background-color: rgba(181, 221, 255, 1);
+    border-radius: 20px;
+    padding: 2rem;
+    /* border: 1px dashed red; */
+}
+
+#demo-app .container .card:first-child {
+    text-align: start;
+    align-items: flex-start;
+    padding: 2rem 2rem 0 2rem;
+}
+
+#demo-app .container .card:first-child .title-text {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#demo-app .card-title {
+    color: var(--cardTitleBlue);
+    font-size: 24px;
+}
+
+#demo-app .card-text {
+    color: #5b6f81;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+#demo-app .card-button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 132, 253, 1);
+    padding: 10px 50px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    align-self: center;
+}
+
+#demo-app .card-button i {
+    padding-right: 10px;
+}
+
+#demo-app .card > i {
+    font-size: 80px;
+    color: var(--cardTitleBlue);
+}
 
 /* ANCHOR begin footer style */
 
@@ -67,6 +141,23 @@ header .container .menu .menu-list {
 
 /* ANCHOR @media tablet 810px */
 
+@media screen and (min-width: 810px) {
+
+    /* NOTE demo app section */
+    #demo-app .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    #demo-app .container .card {
+        flex-basis: calc((100% / 3 - (40px / 3)));
+    }
+
+    #demo-app .container .card:first-child {
+        flex-basis: calc(((100% / 3 - (40px / 3))) * 2 + 20px);
+    }
+
+}
 
 
 
@@ -77,7 +168,7 @@ header .container .menu .menu-list {
 @media screen and (min-width: 1920px) {
 
     /* NOTE header */
-    .container {
+    header .container {
         width: 60%;
         margin: 0 auto;
     }
@@ -103,5 +194,32 @@ header .container .menu .menu-list {
         background-color: white;
         padding: 10px;
         border-radius: 20px;
+    }
+
+    /* NOTE demo app section */
+
+    main {
+        margin-top: 3rem;
+    }
+
+    #demo-app .container {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    #demo-app .container .card:first-child {
+        flex-direction: row;
+    }
+
+    #demo-app .container .card:first-child .title-text {
+        flex-basis: 50%;
+    }
+
+    #demo-app .container .card:first-child .title-text .card-button {
+        align-self: flex-start;
+    }
+
+    #demo-app .container .card:first-child .card-img {
+        flex-basis: 50%;
     }
 }
