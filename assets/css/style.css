@@ -289,6 +289,69 @@ main {
 }
 
 
+/* ANCHOR about us section style */
+
+#about-us .container {
+    border: 2px dashed red;
+    gap: 50px;
+}
+
+#about-us .container .about-us-text,
+#about-us .container .about-us-testimonial {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+#about-us .container .about-us-text .section-title {
+    font-size: 48px;
+    color: var(--lightpurple);
+}
+
+#about-us .container .about-us-text > p {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#about-us .container .about-us-testimonial > p {
+    font-size: 30px;
+    color: var(--lightpurple);
+    line-height: 42px;
+    font-weight: 700;
+}
+
+#about-us .container .about-us-testimonial > figure {
+    background-image: url('../img/about.jpg');
+    width: 60%;
+    aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    position: relative;
+}
+
+#about-us .container .about-us-testimonial > figure > i {
+    color: var(--lightpurple);
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#about-us .container .about-us-testimonial > a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--lightpurple);
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+
+#about-us .container .about-us-testimonial > a > i {
+    margin-right: 5px;
+}
+
+
 /* ANCHOR begin footer style */
 
 
@@ -369,7 +432,55 @@ main {
         flex-basis: calc( (100% / 2) - 10px);
     }
 
+
+    /* NOTE about us section */
+
+    #about-us .container {
+        flex-direction: row;
+        /* gap: 30px; */
+    }
+
+    #about-us .container .about-us-text,
+    #about-us .container .about-us-testimonial {
+        padding: 1rem;
+    }
+
+    #about-us .container .about-us-text {
+        flex-basis: 60%;
+    }
+
+    #about-us .container .about-us-testimonial {
+        flex-basis: 40%;
+    }
+
+    #about-us .container .about-us-testimonial > figure {
+        width: 90%;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -496,5 +607,25 @@ main {
 
     #features .container .card > h3 {
         font-size: 30px;
+    }
+
+
+
+    /* NOTE about us section */
+
+    #about-us .container .about-us-text {
+        flex-basis: 70%;
+    }
+
+    #about-us .container .about-us-text .section-title {
+        font-size: 70px;
+    }
+
+    #about-us .container .about-us-testimonial {
+        flex-basis: 30%;
+    }
+
+    #about-us .container .about-us-testimonial > figure {
+        width: 80%;
     }
 }
