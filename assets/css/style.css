@@ -403,7 +403,21 @@ main {
 
 /* ANCHOR begin footer style */
 
+footer {
+    background-color: rgba(51, 51, 51, 1);
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
 
+footer .container {
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: var(--lightpurple);
+}
 
 
 
@@ -526,6 +540,15 @@ main {
         font-weight: 700;
         font-size: 60px;
         color: rgba(253, 193, 95, 1);
+    }
+
+
+
+    /* NOTE footer */
+
+    footer .container {
+        width: 50%;
+        margin: 0 auto;
     }
 
 }
@@ -706,5 +729,19 @@ main {
 
     #get-started .container p {
         width: 40%;
+    }
+
+
+
+
+    /* NOTE footer */
+
+    footer {
+        font-size: 16px;
+    }
+
+    footer .container {
+        width: 20%;
+        margin: 0 auto;
     }
 }
