@@ -352,6 +352,55 @@ main {
 }
 
 
+
+
+/* ANCHOR get started section style */
+
+#get-started {
+    text-align: center;
+    background-color: var(--lightpurple);
+    color: white;
+}
+
+#get-started .container {
+    padding: 3rem;
+    align-items: center;
+}
+
+#get-started .container .little-title {
+    color: rgba(205, 204, 242, 1);
+}
+
+#get-started .container h3 {
+    font-size: 30px;
+}
+
+#get-started .container .big-title {
+    font-weight: 700;
+    font-size: 60px;
+    color: rgba(253, 193, 95, 1);
+}
+
+#get-started .container > a {
+    color: var(--lightpurple);
+    background-color: white;
+    padding: 15px 70px;
+    border-radius: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-block: 1.5rem;
+}
+
+#get-started .container .copyright {
+    font-size: 14px;
+}
+
+#get-started .container .copyright > a {
+    color: white;
+}
+
+
+
 /* ANCHOR begin footer style */
 
 
@@ -455,6 +504,28 @@ main {
 
     #about-us .container .about-us-testimonial > figure {
         width: 90%;
+    }
+
+
+
+    /* NOTE get started section */
+
+    #get-started .container h3 {
+        font-size: 40px;
+    }
+
+    #get-started .container p {
+        width: 70%;
+    }
+
+    #get-started .container .little-title {
+        font-size: 20px;
+    }
+    
+    #get-started .container .big-title {
+        font-weight: 700;
+        font-size: 60px;
+        color: rgba(253, 193, 95, 1);
     }
 
 }
@@ -627,5 +698,13 @@ main {
 
     #about-us .container .about-us-testimonial > figure {
         width: 80%;
+    }
+
+
+
+    /* NOTE get started section */
+
+    #get-started .container p {
+        width: 40%;
     }
 }
