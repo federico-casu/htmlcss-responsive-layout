@@ -5,6 +5,7 @@
 :root {
     --cardTitleBlue: rgba(0, 132, 253, 1);
     --lightpurple: rgba(151, 146, 228, 1);
+    --bg-cards: rgba(181, 221, 255, 1);
 }
 
 /* ANCHOR resets */
@@ -54,7 +55,7 @@ p {
 /* ANCHOR mobile first */
 /* ANCHOR header style */
 header {
-    background-color: rgba(0, 132, 253, 1);
+    background-color: var(--cardTitleBlue);
     height: 80px;
     position: fixed;
     top: 0;
@@ -77,9 +78,26 @@ header .container .menu .fa-bars {
     font-size: 160%;
 }
 
+
 header .container .menu .menu-list {
     display: none;
 }
+
+header .container .menu i:hover + .menu-list,
+header .container .menu .menu-list:hover {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(212, 212, 212, 0.8);
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    list-style-type: none;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 10px var(--cardTitleBlue);
+}
+
 
 /* ANCHOR main style */
 
@@ -97,7 +115,7 @@ main {
 #demo-app .container .card {
     align-items: center;
     text-align: center;
-    background-color: rgba(181, 221, 255, 1);
+    background-color: var(--bg-cards);
 }
 
 #demo-app .container .card:first-child {
@@ -125,7 +143,7 @@ main {
 #demo-app .card-button {
     text-decoration: none;
     color: white;
-    background-color: rgba(0, 132, 253, 1);
+    background-color: var(--cardTitleBlue);
     padding: 10px 50px;
     border-radius: 20px;
     font-weight: 700;
@@ -137,7 +155,7 @@ main {
     padding-right: 10px;
 }
 
-#demo-app .card > i {
+#demo-app .card>i {
     font-size: 80px;
     color: var(--cardTitleBlue);
 }
@@ -146,7 +164,7 @@ main {
 /* ANCHOR planning section style */
 
 #planning {
-    background-color: rgba(151, 146, 228, 1);
+    background-color: var(--lightpurple);
     color: white;
 }
 
@@ -158,7 +176,7 @@ main {
     flex-direction: column;
 }
 
-#planning .container .planning-img-text > figure {
+#planning .container .planning-img-text>figure {
     margin-block: 2rem;
 }
 
@@ -173,15 +191,27 @@ main {
     border-radius: 40px;
 }
 
-#planning .card > p {
+#planning .card>h3,
+#planning .card>p {
     text-align: center;
+}
+
+#planning .container .card>h3 {
+    margin-top: 1rem;
+}
+
+#planning .container .card>p {
+    margin-block: 1rem;
 }
 
 #planning .card i {
     color: black;
-    background-color: rgba(151, 146, 228, 1);
+    background-color: var(--lightpurple);
     padding: 15px 17px;
     border-radius: 100%;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 /* ANCHOR testimonials section style */
@@ -190,15 +220,15 @@ main {
     text-align: center;
 }
 
-#testimonials .container > h2 {
+#testimonials .container>h2 {
     font-size: 36px;
     font-weight: 700;
-    color: rgba(151, 146, 228, 1);
+    color: var(--lightpurple);
 }
 
 #testimonials .container .card {
     color: white;
-    background-color: rgba(151, 146, 228, 1);
+    background-color: var(--lightpurple);
     align-items: center;
 
     border-radius: 40px;
@@ -261,25 +291,25 @@ main {
     align-items: flex-start;
 }
 
-#features .container .card > span, 
-#features .container .card > h3 {
+#features .container .card>span,
+#features .container .card>h3 {
     color: var(--lightpurple);
 }
 
-#features .container .card > span {
+#features .container .card>span {
     font-weight: 700;
     font-size: 48px;
 }
 
-#features .container .card > h3 {
+#features .container .card>h3 {
     font-size: 24px;
 }
 
-#features .container .card > p {
+#features .container .card>p {
     color: rgba(124, 124, 124, 1);
 }
 
-#features .container .card > a {
+#features .container .card>a {
     text-decoration: none;
     color: white;
     font-weight: 700;
@@ -309,19 +339,19 @@ main {
     color: var(--lightpurple);
 }
 
-#about-us .container .about-us-text > p {
+#about-us .container .about-us-text>p {
     font-size: 20px;
     line-height: 40px;
 }
 
-#about-us .container .about-us-testimonial > p {
+#about-us .container .about-us-testimonial>p {
     font-size: 30px;
     color: var(--lightpurple);
     line-height: 42px;
     font-weight: 700;
 }
 
-#about-us .container .about-us-testimonial > figure {
+#about-us .container .about-us-testimonial>figure {
     background-image: url('../img/about.jpg');
     width: 60%;
     aspect-ratio: 1;
@@ -332,7 +362,7 @@ main {
     position: relative;
 }
 
-#about-us .container .about-us-testimonial > figure > i {
+#about-us .container .about-us-testimonial>figure>i {
     color: var(--lightpurple);
     font-size: 60px;
     position: absolute;
@@ -340,7 +370,7 @@ main {
     right: 0;
 }
 
-#about-us .container .about-us-testimonial > a {
+#about-us .container .about-us-testimonial>a {
     text-decoration: none;
     color: white;
     background-color: var(--lightpurple);
@@ -348,7 +378,7 @@ main {
     border-radius: 20px;
 }
 
-#about-us .container .about-us-testimonial > a > i {
+#about-us .container .about-us-testimonial>a>i {
     margin-right: 5px;
 }
 
@@ -382,7 +412,7 @@ main {
     color: rgba(253, 193, 95, 1);
 }
 
-#get-started .container > a {
+#get-started .container>a {
     color: var(--lightpurple);
     background-color: white;
     padding: 15px 70px;
@@ -396,7 +426,7 @@ main {
     font-size: 14px;
 }
 
-#get-started .container .copyright > a {
+#get-started .container .copyright>a {
     color: white;
 }
 
@@ -430,25 +460,6 @@ footer a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ANCHOR @media tablet 768px */
 
 @media screen and (min-width: 768px) {
@@ -458,7 +469,7 @@ footer a {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
+
     #demo-app .container .card {
         flex-basis: calc((100% / 3 - (40px / 3)));
     }
@@ -493,7 +504,7 @@ footer a {
     }
 
     #features .container .card {
-        flex-basis: calc( (100% / 2) - 10px);
+        flex-basis: calc((100% / 2) - 10px);
     }
 
 
@@ -517,7 +528,7 @@ footer a {
         flex-basis: 40%;
     }
 
-    #about-us .container .about-us-testimonial > figure {
+    #about-us .container .about-us-testimonial>figure {
         width: 90%;
     }
 
@@ -536,7 +547,7 @@ footer a {
     #get-started .container .little-title {
         font-size: 20px;
     }
-    
+
     #get-started .container .big-title {
         font-weight: 700;
         font-size: 60px;
@@ -553,26 +564,6 @@ footer a {
     }
 
 }
-
-
-
-/* TODO fix 810px @medias and p tags. set containers with % width instead of p's width % */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -669,7 +660,7 @@ footer a {
         gap: 40px;
     }
 
-    #planning .container .planning-img-text > figure {
+    #planning .container .planning-img-text>figure {
         margin-bottom: 5rem;
     }
 
@@ -678,18 +669,12 @@ footer a {
         text-align: center;
     }
 
-    #planning .container .card > figure {
+    #planning .container .card>figure {
         width: 70%;
         margin: 0 auto;
     }
 
-    #planning .container .card > h3 {
-        margin-top: 1rem;
-    }
 
-    #planning .container .card > p {
-        margin-block: 1rem;
-    }
 
 
     /* NOTE testimonials section */
@@ -708,20 +693,20 @@ footer a {
         /* border: 2px solid red; */
     }
 
-    #features .container > .section-title {
+    #features .container>.section-title {
         flex-basis: 100%;
         font-size: 48px;
     }
 
     #features .container .card {
-        flex-basis: calc( (100% / 3) - (40px / 3));
+        flex-basis: calc((100% / 3) - (40px / 3));
     }
 
-    #features .container .card > span {
+    #features .container .card>span {
         font-size: 56px;
     }
 
-    #features .container .card > h3 {
+    #features .container .card>h3 {
         font-size: 30px;
     }
 
@@ -741,7 +726,7 @@ footer a {
         flex-basis: 30%;
     }
 
-    #about-us .container .about-us-testimonial > figure {
+    #about-us .container .about-us-testimonial>figure {
         width: 80%;
     }
 
